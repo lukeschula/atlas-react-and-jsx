@@ -1,10 +1,10 @@
 import React from "react";
-import Greeting from "./Greeting";
-import SocialLinks from "./SocialLinks";
+import Greeting from "./Greeting.jsx";
+import SocialLinks from "./SocialLinks.jsx";
 
-function Header() {
+const Header = () => {
     return (
-        <nav>
+        <nav className="navbar">
             <Greeting />
             <SocialLinks />
         </nav>
