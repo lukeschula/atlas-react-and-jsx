@@ -1,18 +1,19 @@
 import React from "react";
+import linkedin from "../assets/linkedin.svg"
+import github from "../assets/github.svg"
 
 
-function SocialLinks() {
+const SocialLinks = () =>{
     return (
-
         <div className="social-links">
             <a href="https://www.linkedin.com/in/luke-schula-480548169/">
-                <Image src="../assets/linkedin.svg" className="LinkedinIcon" />
+                <img src="../assets/linkedin.svg" alt="LinkedinIcon" />
             </a>
             <a href="https://github.com/lukeschula">
-                <Image src="../assets/github.svg" className="GithubIcon" />
+                <img src="../assets/github.svg" alt="GithubIcon" />
             </a>
         </div>
     );
 }
 
-export default SocialLinks
+export default SocialLinks;
