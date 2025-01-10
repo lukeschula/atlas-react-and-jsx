@@ -1,37 +1,35 @@
 import React from "react";
-import day from "./src/assets/day.svg";
-import evening from "./src/assets/evening.svg";
-import night from "./src/assets/night.svg";
+import day from "../assets/day.svg";
+import evening from "../assets/evening.svg";
+import night from "../assets/night.svg";
 
-function Greetings() {
+const Greeting = () => {
     const currentHour = new Date().getHours();
 
-    let greeting = "";
+    let greetingMess = "";
     let image = null;
 
     //Logic for greeting based on time of day
     if (currentHour >= 6 && currentHour <= 11) {
-        greeting = "Good Morning!";
+        greetingMess = "Good Morning!";
         image = day;
     } else if (currentHour >= 12 && currentHour <= 16) {
-        greeting = "Good Afternoon!";
+        greetingMess = "Good Afternoon!";
         image = day;
     } else if (currentHour >= 17 && currentHour <= 20) {
-        greeting = "Good Evening!";
+        greetingMess = "Good Evening!";
         image = evening;
     } else {
-        greeting = "Good Night!";
+        greetingMess = "Good Night!";
         image = night;
     }
 
     return (
-        <div>
-            <h1>
-                greeting
-                <img className="conditional-greeeting" src={image} alt={"greeting"} />
+            <h1 className="greetings">
+                <img src={image} alt="Greeting Image" />
+                {greetingMess}
             </h1>
-        </div>
     );
-}
+};
 
-export default Greetings;
+export default Greeting;
